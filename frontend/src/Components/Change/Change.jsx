@@ -11,6 +11,7 @@ function Change() {
     const [items, setitems] = useState([
         
     ])
+    const [shops,setshops]=useState([])
     const getAdmindetails = () => {
         axios.get('http://localhost:8008/admin/').then((response) => {
           console.log(response);
@@ -20,10 +21,10 @@ function Change() {
 
 
 
-      const getAdmindetails = () => {
+      const getAdminShopdetails = () => {
         axios.get('http://localhost:8008/admin/shops').then((response) => {
           console.log(response);
-          setitems(response.data.shops)
+          setshops(response.data.shops)
         })
       }
 

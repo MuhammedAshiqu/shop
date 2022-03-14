@@ -206,17 +206,17 @@ module.exports = {
 
 
 
-  addShop: (shop,user, callback) => {
+  addShop: async(shop,user, callback) => {
     return new Promise((resolve,reject)=>{
       // console.log("my",user);
       // console.log(product);
-      product.input.price = parseInt(product.input.price);
+      //product.input.price = parseInt(product.input.price);
       const shops={
         Name:shop.input.name,
-        Category:shpinput.category,
+        Category:shop.input.category,
         Price: shop.input.price,
         Description:shop.input. description,
-        url:product.url,
+        url:shop.url,
         CreatedBy:user. Email,
         reviews:[]
       }
